@@ -22,7 +22,6 @@ useEffect(() => {
     .then(data => {
       setProducts(data);
       setFilteredProducts(data);
-      // Generate unique categories
       const cats = ['All', ...new Set(data.map(p => p.category))];
       setCategories(cats);
     });
